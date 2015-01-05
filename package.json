@@ -1,7 +1,13 @@
 {
   "name": "brokerswebplatform",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "imagemin-gifsicle": "^4.0.0",
+    "imagemin-jpegtran": "^4.0.0",
+    "imagemin-optipng": "^4.0.0",
+    "imagemin-pngquant": "^4.0.0",
+    "imagemin-svgo": "^4.0.1"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
