@@ -1,0 +1,20 @@
+<h1 class="title">Introducción de Código</h1>
+
+<div id="enter_code">
+    <input
+        id="code"
+        type="text"
+        placeholder="Please, enter your code here"
+        ng-keyup="checkCode($event)"
+        ng-model="code"
+        />
+
+    <div class="loading" ng-if="loading">
+        Cargando
+    </div>
+
+    <div class="error" ng-if="error">
+        {{error}}
+    </div>
+</div>
+

@@ -1,0 +1,32 @@
+<h1 class="title">Resultados</h1>
+
+<div class="test_results">
+
+    <div class="loading" ng-if="!test.results">
+        Calculando
+    </div>
+
+    <div class="results" ng-if="test.results">
+
+        <div class="disc-graph">
+            <canvas id="doughnut"
+                    class="chart chart-doughnut"
+                    legend=true
+                    data="scores"
+                    labels="labels"
+                    colours="colours">
+            </canvas>
+        </div>
+
+        <p>
+            Tomando en cuenta este gráfico:
+        </p>
+
+        <p class="conclusion">
+            {{test.results.conclusion}}
+        </p>
+
+        <a class="go_back" href="#/">Go to Home</a>
+    </div>
+</div>
+

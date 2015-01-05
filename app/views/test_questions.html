@@ -1,0 +1,42 @@
+<h1 class="title">Preguntas</h1>
+
+<div class="test_questions">
+
+    <div class="question" ng-if="questions">
+        <!-- DESCOMENTAR CUANDO SE USEN TEXTOS INDEPENDIENTES POR PREGUNTA -->
+        <!--h2>
+            {{questions[question_id].text}}
+        </h2-->
+        <h2>
+            Selecciona la casilla M en la opción que te sientas más idenfiticado y Me en la que te sientas menos idenfiticado.
+        </h2>
+
+        <ul>
+            <li ng-repeat="(option_id, option) in questions[question_id].options"
+                ng-if="option"
+            >
+                <div
+                    class="answer type_M"
+                    ng-visible="question_answer.Me != option_id"
+                    ng-class="{checked: question_answer.M == option_id}"
+                    ng-click="answer('M', option_id)">
+                    M
+                </div>
+                <div
+                    class="answer type_Me"
+                    ng-visible="question_answer.M != option_id"
+                    ng-class="{checked: question_answer.Me == option_id}"
+                    ng-click="answer('Me', option_id)">
+                    Me
+                </div>
+                <span class="text">{{option}}</span>
+            </li>
+        </ul>
+        <div ng-click="next()" class="next_btn">
+            Siguiente
+        </div>
+    </div>
+    <div ng-if="!questions" class="loading">
+        Cargando...
+    </div>
+</div>
