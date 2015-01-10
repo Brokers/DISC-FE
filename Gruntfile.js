@@ -1,4 +1,4 @@
-// Generated on 2014-12-04 using generator-angular 0.10.0
+// Generated on 2015-01-10 using generator-angular 0.10.0
 'use strict';
 
 // # Globbing
@@ -66,10 +66,10 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: process.env.PORT,
+        port: process.env.PORT || 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: process.env.IP,
-        //livereload: 35729
+        hostname: process.env.IP || 'localhost',
+        livereload: 35729
       },
       livereload: {
         options: {
@@ -336,7 +336,7 @@ module.exports = function (grunt) {
       dist: [
         'copy:styles',
         'imagemin',
-        //'svgmin'
+        'svgmin'
       ]
     },
 
