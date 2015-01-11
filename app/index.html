@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="brokersWebPlatformApp">
+  <body ng-app="brokersFrontendApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -41,7 +41,11 @@
 
       <div ng-view=""></div>
     </div>
-
+      <script>
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET","https://brokers-compute.herokuapp.com/",true);
+        xmlhttp.send();
+      </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -94,6 +98,7 @@
         <script src="scripts/services/test.js"></script>
         <script src="scripts/services/underscore.js"></script>
         <script src="scripts/directives/ngvisible.js"></script>
+        <script src="scripts/directives/discgraphicbar.js"></script>
         <!-- endbuild -->
 </body>
 </html>

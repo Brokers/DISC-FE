@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc directive
- * @name brokersWebPlatformApp.directive:ngVisible
+ * @name brokersFrontendApp.directive:ngVisible
  * @description
  * https://gist.github.com/c0bra/5859295
  * # ngVisible
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
     .directive('ngVisible', function () {
         return function (scope, element, attr) {
             scope.$watch(attr.ngVisible, function (visible) {

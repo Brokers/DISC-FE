@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name brokersWebPlatformApp.controller:TestQuestionsCtrl
+ * @name brokersFrontendApp.controller:TestQuestionsCtrl
  * @description
  * # TestQuestionsCtrl
- * Controller of the brokersWebPlatformApp
+ * Controller of the brokersFrontendApp
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .controller('TestQuestionsCtrl', function ($rootScope, $scope, $routeParams, $firebase, fbURL, TestBaseControllerHandler) {
     TestBaseControllerHandler($routeParams).then(function(test) {
       var main_ref = new Firebase(fbURL);

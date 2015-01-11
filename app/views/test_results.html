@@ -8,7 +8,7 @@
 
     <div class="results" ng-if="test.results">
 
-        <div class="disc-graph">
+        <!--div class="disc-graph">
             <canvas id="doughnut"
                     class="chart chart-doughnut"
                     legend=true
@@ -16,11 +16,39 @@
                     labels="labels"
                     colours="colours">
             </canvas>
-        </div>
+        </div-->
 
-        <p>
-            Tomando en cuenta este gráfico:
-        </p>
+        <div class="graphics">
+            <div id="adapted"
+                class="disc-graphic-bar"
+                score="adapted_behaivor">
+                Perfil Adaptado
+            </div>
+            <div id="natural"
+                class="disc-graphic-bar"
+                score="natural_behaivor">
+                Perfil Natural
+            </div>
+
+            <div class="legend-list">
+                <div class="legend D">
+                    <div class="color"></div>
+                    <span class="desc">Determinante</span>
+                </div>
+                <div class="legend I">
+                    <div class="color"></div>
+                    <span class="desc">Influyente</span>
+                </div>
+                <div class="legend S">
+                    <div class="color"></div>
+                    <span class="desc">Sereno</span>
+                </div>
+                <div class="legend C">
+                    <div class="color"></div>
+                    <span class="desc">Concienzudo</span>
+                </div>
+            </div>
+        </div>
 
         <p class="conclusion">
             {{test.results.conclusion}}

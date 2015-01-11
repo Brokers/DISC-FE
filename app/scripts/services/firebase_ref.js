@@ -4,12 +4,12 @@ var Firebase = window.Firebase;
 
 /**
  * @ngdoc service
- * @name brokersWebPlatformApp.firebaseRef
+ * @name brokersFrontendApp.firebaseRef
  * @description
  * # firebaseRef
- * Service in the brokersWebPlatformApp.
+ * Service in the brokersFrontendApp.
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .service('firebaseRef', function ($firebase, fbURL) {
     var main_ref = new Firebase(fbURL);
 

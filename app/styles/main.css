@@ -374,3 +374,130 @@ div#about {}
     bottom: 4px;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.24);
 }
+
+.results .graphics {
+    display: block;
+    height: 300px;
+}
+
+.results .graphics > .disc-graphic-bar {
+    width: 49%;
+    height: 250px;
+    display: inline-block;
+    position: relative;
+}
+
+.results .graphics .legend-list {
+    height: 50px;
+    text-align: center;
+}
+
+.results .graphics .legend-list .legend {
+    height: 100%;
+    display: inline-block;
+    margin: 0 10px;
+    padding-top: 5px;
+}
+
+.results .graphics .legend-list .legend .color {
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    background: rgba(0, 0, 0, 0.59);
+    border: 2px solid black;
+    vertical-align: middle;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.results .graphics .legend-list .legend.D .color {
+    background: rgba(254, 108, 108, 0.6);
+    border: 2px solid rgb(254, 108, 108);
+}
+
+.results .graphics .legend-list .legend.I .color {
+    background: rgba(255, 232, 43, 0.6);
+    border: 2px solid rgb(255, 232, 43);
+}
+
+.results .graphics .legend-list .legend.S .color {
+    background: rgba(121, 255, 121, 0.6);
+    border: 2px solid rgb(121, 255, 121);
+}
+
+.results .graphics .legend-list .legend.C .color {
+    background: rgba(128, 128, 233, 0.6);
+    border: 2px solid rgb(128, 128, 233);
+}
+
+.results .graphics .legend-list .legend .desc {
+    vertical-align: middle;
+}
+
+/* Directives */
+.disc-graphic-bar {
+    width: 100%;
+    border: 2px solid rgb(192, 243, 255);
+    border-radius: 5px;
+}
+
+.disc-graphic-bar .description {
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 30px;
+}
+
+.disc-graphic-bar .bars {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    left: 10px;
+    bottom: 5px;
+}
+
+.disc-graphic-bar .bar {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.67);
+    background: gray;
+    border-radius: 5px 5px 2px 2px;
+    width: 20%;
+    height: 50%;
+    font-size: 50px;
+    transition: height 2s ease;
+}
+
+.disc-graphic-bar .bar.D {
+    background: rgb(254, 108, 108);
+    left: 2.5%;
+}
+
+.disc-graphic-bar .bar.S {
+    left: 52.5%;
+    background: rgb(121, 255, 121);
+}
+
+.disc-graphic-bar .bar.C {
+    left: 77.5%;
+    background: rgb(128, 128, 233);
+}
+
+.disc-graphic-bar .bar.I {
+    left: 27.5%;
+    background: rgb(255, 232, 43);
+}
+
+.disc-graphic-bar .bars:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    left: -5px;
+    height: 0;
+    border: 1px solid rgba(51, 216, 255, 0.5);
+}

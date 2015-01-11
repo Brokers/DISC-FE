@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name brokersWebPlatformApp.controller:TestIntroCtrl
+ * @name brokersFrontendApp.controller:TestIntroCtrl
  * @description
  * # TestIntroCtrl
- * Controller of the brokersWebPlatformApp
+ * Controller of the brokersFrontendApp
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .controller('TestIntroCtrl', function ($rootScope, $scope, $routeParams, TestBaseControllerHandler) {
     TestBaseControllerHandler($routeParams);
     /*

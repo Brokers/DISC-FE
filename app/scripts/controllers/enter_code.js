@@ -1,12 +1,12 @@
 'use strict';
 /**
  * @ngdoc function
- * @name brokersWebPlatformApp.controller:EnterCodeCtrl
+ * @name brokersFrontendApp.controller:EnterCodeCtrl
  * @description
  * # EnterCodeCtrl
- * Controller of the brokersWebPlatformApp
+ * Controller of the brokersFrontendApp
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .controller('EnterCodeCtrl', function ($rootScope, $scope, $q, AccessCode, $location) {
 
     $scope.code = "";

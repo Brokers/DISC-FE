@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name brokersWebPlatformApp.TestBaseControllerHandler
+ * @name brokersFrontendApp.TestBaseControllerHandler
  * @description
  * # TestBaseControllerHandler
- * Factory in the brokersWebPlatformApp.
+ * Factory in the brokersFrontendApp.
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .factory('TestBaseControllerHandler', function ($rootScope, $location, Test, $q) {
     return function($routeParams) {
       var test_id = $routeParams.testId;

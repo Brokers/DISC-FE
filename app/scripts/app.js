@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name brokersWebPlatformApp
+ * @name brokersFrontendApp
  * @description
- * # brokersWebPlatformApp
+ * # brokersFrontendApp
  *
  * Main module of the application.
  */
 angular
-  .module('brokersWebPlatformApp', [
+  .module('brokersFrontendApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -19,7 +19,7 @@ angular
     'chart.js',
     'firebase'
   ])
-  .value('fbURL', 'https://brokers.firebaseio.com//')
+  .value('fbURL', 'https://brokers.firebaseio.com/')
   .run(function($rootScope) {
     window.$rootScope = $rootScope;
   })

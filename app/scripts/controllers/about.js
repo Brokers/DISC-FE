@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name brokersWebPlatformApp.controller:AboutCtrl
+ * @name brokersFrontendApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the brokersWebPlatformApp
+ * Controller of the brokersFrontendApp
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

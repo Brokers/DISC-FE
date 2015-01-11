@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name brokersWebPlatformApp.AccessCode
+ * @name brokersFrontendApp.AccessCode
  * @description
  * # AccessCode
- * Factory in the brokersWebPlatformApp.
+ * Factory in the brokersFrontendApp.
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .factory('AccessCode', function($q, firebaseRef, $FirebaseObject, $firebase, User, Test) {
 
     var main_ref = firebaseRef.get();

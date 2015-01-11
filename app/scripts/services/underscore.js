@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name brokersWebPlatformApp.underscore
+ * @name brokersFrontendApp.underscore
  * @description
  * # underscore
- * Factory in the brokersWebPlatformApp.
+ * Factory in the brokersFrontendApp.
  */
-angular.module('brokersWebPlatformApp')
+angular.module('brokersFrontendApp')
   .factory('_', function ($window) {
     return $window._;
   });
