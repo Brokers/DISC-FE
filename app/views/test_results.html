@@ -21,12 +21,12 @@
         <div class="graphics">
             <div id="adapted"
                 class="disc-graphic-bar"
-                score="adapted_behaivor">
+                score="adaptedBehaivor">
                 Perfil Adaptado
             </div>
             <div id="natural"
                 class="disc-graphic-bar"
-                score="natural_behaivor">
+                score="naturalBehaivor">
                 Perfil Natural
             </div>
 
@@ -50,10 +50,109 @@
             </div>
         </div>
 
-        <p class="conclusion">
+        <!--p class="conclusion">
             {{test.results.conclusion}}
-        </p>
+        </p-->
 
+        <div>
+            <p>
+                Hay cuatro tipos básicos de personalidad, conocidos como conducta D, I, S y C. Toda persona es una mezcla o combinación de estos cuatro temperamentos y por eso ningún tipo es mejor que otro. El factor más importante es que hace usted con su personalidad. No deje que su personalidad lo controle; más bien aprenda cómo controlar su personalidad.
+            </p>
+            <p>
+                A continuación usted conocerá cual es el grupo general de personalidad que usted posiblemente tenga principalmente y secundariamente.
+            </p>
+        </div>
+
+        <div>
+            <h2>Conducta Principal {{report.letters.primaryConduct}}</h2>
+            <div>
+                <div>
+                    <b>Descripciones:</b>
+                    <span>{{ report.primaryConduct.description }}</span>
+                </div>
+                <div>
+                    <b>Motivación básica:</b>
+                    <span>{{ report.primaryConduct.motivation }}</span>
+                </div>
+                <div>
+                    <b>Deseos:</b>
+                    <span>{{ report.primaryConduct.desires }}</span>
+                </div>
+                <div>
+                    <b>Responde mejor al líder que:</b>
+                    <span>{{ report.primaryConduct.best_leader }}</span>
+                </div>
+                <div>
+                    <b>Necesita aprender: </b>
+                    <span>{{ report.primaryConduct.to_learn }}</span>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div>
+            <h2>Conducta Secundaria {{report.letters.secondaryConduct}}</h2>
+            <div>
+                <div>
+                    <b>Descripciones:</b>
+                    <span>{{ report.secondaryConduct.description }}</span>
+                </div>
+                <div>
+                    <b>Motivación básica:</b>
+                    <span>{{ report.secondaryConduct.motivation }}</span>
+                </div>
+                <div>
+                    <b>Deseos:</b>
+                    <span>{{ report.secondaryConduct.desires }}</span>
+                </div>
+                <div>
+                    <b>Responde mejor al líder que:</b>
+                    <span>{{ report.secondaryConduct.best_leader }}</span>
+                </div>
+                <div>
+                    <b>Necesita aprender: </b>
+                    <span>{{ report.secondaryConduct.to_learn }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>PERSONALIDAD ESPECÍFICA “ESTE SOY YO”:</h2>
+            <h3>
+                {{report.letters.naturalProfile.toUpperCase().split('').join('/')}}
+                - {{report.naturalProfile.name}}
+            </h3>
+
+            <p>
+                {{report.naturalProfile.description}}
+            </p>
+
+            <h3>REFLEXIONES PERSONALES:</h3>
+            <ul>
+                <li  ng-repeat="reflexion in report.naturalProfile.reflexions" >
+                    {{reflexion}}
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>PERSONALIDAD ESPECÍFICA “ESTO SE ESPERA DE MÍ”:</h2>
+            <h3>
+                {{report.letters.naturalProfile.toUpperCase().split('').join('/')}}
+                - {{report.naturalProfile.name}}
+            </h3>
+
+            <p>
+                {{report.naturalProfile.description}}
+            </p>
+
+            <h3>REFLEXIONES PERSONALES:</h3>
+            <ul>
+                <li  ng-repeat="reflexion in report.naturalProfile.reflexions" >
+                    {{reflexion}}
+                </li>
+            </ul>
+        </div>
         <a class="go_back" href="#/">Go to Home</a>
     </div>
 </div>

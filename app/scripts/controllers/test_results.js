@@ -8,31 +8,28 @@
  * Controller of the brokersFrontendApp
  */
 angular.module('brokersFrontendApp')
-  .controller('TestResultsCtrl', function ($rootScope, $scope, $routeParams, $firebase, TestBaseControllerHandler) {
-    TestBaseControllerHandler($routeParams).then(function(test) {
+    .controller('TestResultsCtrl', function ($rootScope, $scope, $routeParams, $firebase, TestBaseControllerHandler, Reports) {
+        TestBaseControllerHandler($routeParams).then(function(test) {
 
-      /*$scope.labels = ["Dominante", "Influyente", "Sereno", "Concienzudo"];
-      $scope.colours = [
-        Chart.defaults.global.colours[3],
-        Chart.defaults.global.colours[2],
-        Chart.defaults.global.colours[0],
-        Chart.defaults.global.colours[4]
-      ];
-      $scope.scores = [100, 100, 100, 100];*/
+            function updateResults() {
+                $scope.adaptedBehaivor = results['adapted_behaivor'];
+                $scope.naturalBehaivor = results['natural_behaivor'];
 
+                var reportPromise = Reports.generateReport(results);
 
+                reportPromise
+                    .then(function(report) {
+                        $scope.report = report; 
+                    })
+                    .catch(function(err) {
+                        console.error(err);
+                    });
+            }
 
-      function update_results() {
-        $scope.adapted_behaivor = results.adapted_behaivor;
-        $scope.natural_behaivor = results.natural_behaivor;
-        console.log($scope.adapted_behaivor);
-        console.log($scope.natural_behaivor);
-      }
+            var results = $firebase(test.$inst().$ref().child("results")).$asObject();
 
-      var results = $firebase(test.$inst().$ref().child("results")).$asObject();
+            results.$loaded(updateResults);
+            results.$watch(updateResults);
 
-      results.$loaded(update_results);
-      results.$watch(update_results);
-
+        });
     });
-  });

@@ -338,6 +338,10 @@ div#about {}
     text-align: center;
 }
 
+@media print {
+    .results>div {page-break-inside: avoid;}
+}
+
 .results .conclusion {
     font-size: 32px;
     font-weight: 300;
