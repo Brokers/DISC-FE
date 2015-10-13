@@ -354,6 +354,31 @@ div#about {}
     margin-bottom: 40px;
 }
 
+.results .download_pdf {
+    position: relative;
+    text-align: center;
+    bottom: 0px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+    display: block;
+    width: 350px;
+    padding: 5px;
+    background-color: rgb(51, 216, 255);
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
+    margin: auto;
+    margin-top: 85px;
+}
+
+.results .download_pdf:hover {
+    position: relative;
+    bottom: 4px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.24);
+}
+
 .results .go_back {
     position: relative;
     text-align: center;
@@ -366,7 +391,7 @@ div#about {}
     display: block;
     width: 200px;
     padding: 5px;
-    background-color: rgb(51, 216, 255);
+    background-color: rgb(116, 116, 116);
     border-radius: 100px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
     margin: auto;

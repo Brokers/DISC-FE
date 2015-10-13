@@ -8,28 +8,33 @@
  * Controller of the brokersFrontendApp
  */
 angular.module('brokersFrontendApp')
-    .controller('TestResultsCtrl', function ($rootScope, $scope, $routeParams, $firebase, TestBaseControllerHandler, Reports) {
+    .controller('TestResultsCtrl', function (
+        $rootScope, $scope, $routeParams, $firebase, TestBaseControllerHandler, Reports
+        ) {
+
         TestBaseControllerHandler($routeParams).then(function(test) {
 
-            function updateResults() {
-                $scope.adaptedBehaivor = results['adapted_behaivor'];
-                $scope.naturalBehaivor = results['natural_behaivor'];
+            $scope.pdfLink = 'https://brokers-compute.herokuapp.com/pdf_report/' + test.$id;
 
-                var reportPromise = Reports.generateReport(results);
+            // function updateResults() {
+            //     $scope.adaptedBehaivor = results['adapted_behaivor'];
+            //     $scope.naturalBehaivor = results['natural_behaivor'];
 
-                reportPromise
-                    .then(function(report) {
-                        $scope.report = report; 
-                    })
-                    .catch(function(err) {
-                        console.error(err);
-                    });
-            }
+            //     var reportPromise = Reports.generateReport(results);
 
-            var results = $firebase(test.$inst().$ref().child("results")).$asObject();
+            //     reportPromise
+            //         .then(function(report) {
+            //             $scope.report = report; 
+            //         })
+            //         .catch(function(err) {
+            //             console.error(err);
+            //         });
+            // }
 
-            results.$loaded(updateResults);
-            results.$watch(updateResults);
+            // var results = $firebase(test.$inst().$ref().child("results")).$asObject();
+
+            // results.$loaded(updateResults);
+            // results.$watch(updateResults);
 
         });
     });
